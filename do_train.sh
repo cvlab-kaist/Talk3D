@@ -1,0 +1,14 @@
+CUDA_VISIBLE_DEVICES=1 python main.py \
+--saveroot_path path/to/saving/directory \
+--data_root_dir path/to/data/root/directory \
+--personal_id May \
+--short_configs test \
+--checkpoint_dir None \
+--use_GFPGAN \
+--do_inference \
+--do_inference_novel \
+--do_inference_OOD \
+--val_max_length -1 \
+--num_gpus 1 \
+--master_port 15379 \
+--inf_camera_type rotation
