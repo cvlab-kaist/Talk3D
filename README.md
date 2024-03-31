@@ -1,6 +1,6 @@
 # Talk3D: High-Fidelity Talking Portrait Synthesis via Personalized 3D Generative Prior
-<a href=""><img src="https://img.shields.io/badge/arXiv-2403.09413-%23B31B1B"></a>
-<a href="https://ku-cvlab.github.io/Talk3D/ "><img src="https://img.shields.io/badge/Project%20Page-online-brightgreen"></a>
+<!-- <a href=""><img src="https://img.shields.io/badge/arXiv-2403.09413-%23B31B1B"></a>
+<a href="https://ku-cvlab.github.io/Talk3D/ "><img src="https://img.shields.io/badge/Project%20Page-online-brightgreen"></a> -->
 <br>
 
 This is our official implementation of the paper 
