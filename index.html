@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Talk3D</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ku-cvlab.github.io/Talk3D/">
+    <meta property="og:title" content="Talk3D: High-Fidelity Talking Portrait Synthesis via Personalized 3D Generative Prior">
+    <meta property="og:description" content="">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/codemirror.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/codemirror.min.js"></script>
+    <script src="js/clipboard.min.js"></script>
+    <script src="js/video_comparison.js"></script>
+    <script src="js/app.js"></script>
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QVFM103BVF"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-QVFM103BVF');
+</script>
+
+<!-- Image Comparison Slider -->
+<!-- https://github.com/sneas/img-comparison-slider -->
+<script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css" />
+
+<body>
+    <div style="margin-left:5%; margin-right:5%">
+    <div class="container" id="header" style="text-align: center; margin: auto;">
+        <div class="row" id="title-row" style="max-width: 100%; margin: 10 auto; display: inline-block">
+            <h1 class="col-md-12 text-center" style="margin-top: 70px; font-size: 36px;" id="title">
+                Talk3D: High-Fidelity Talking Portrait Synthesis <br>via Personalized 3D Generative Prior<br>
+                <!-- <small>
+                    Arxiv 2024
+                </small> -->
+            </h1>
+        </div>
+        <div class="row" id="author-row" style="margin:0 auto;">
+            <div class="col-md-12 text-center" style="display: table; margin:0 auto;">
+                <a style="text-decoration:none" href="https://github.com/mlnyang">
+                    Jaehoon&nbsp;Ko<sup>1</sup>
+                </a>
+                <span style="padding-left: 20px;"></span>
+                <a style="text-decoration:none" href="https://github.com/kyustorm7">
+                    Kyusun&nbsp;Cho<sup>1</sup>
+                </a>
+                <span style="padding-left: 20px;"></span>
+                <a style="text-decoration:none" href="https://github.com/joungbinlee">
+                    Joungbin&nbsp;Lee<sup>1</sup>
+                </a>
+                <br>
+                <a style="text-decoration:none" href="https://github.com/yoon-heez">
+                    Heeji&nbsp;Yoon<sup>1</sup>
+                </a>
+                <span style="padding-left: 20px;"></span>
+                <a style="text-decoration:none" href="https://github.com/00tilinfinity">
+                    Sangmin&nbsp;Lee<sup>1</sup>
+                </a>
+                <span style="padding-left: 20px;"></span>
+                <a style="text-decoration:none">
+                    Sangjun&nbsp;Ahn<sup>2</sup>
+                </a>
+                <span style="padding-left: 20px;"></span>
+                <a style="text-decoration:none" href="https://cvlab.korea.ac.kr">
+                    Seungryong&nbsp;Kim<sup>1</sup>
+                </a>
+
+                <table class="author-table" id="author-table">
+                    <tr>
+                        <td>
+    <br>
+                            <img src="./imgs_talk3d/icons/Korea_University.png" width="15px">&nbsp;
+                            Korea University<sup>1</sup>
+                            <span style="padding-left: 20px;"></span>
+                            <img src="./imgs_talk3d/icons/NC.png" width="25px">&nbsp;
+                            NCSOFT<sup>2</sup>
+                        </td>
+                    </tr>
+                    
+                </table>
+                
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('author-row').style.maxWidth = document.getElementById("-row").clientWidth + 'px';
+    </script>
+
+    <div class="container" id="main">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3 text-center">
+                <ul class="nav nav-pills nav-justified">
+                    <li>
+                        <a href="http://arxiv.org/abs/2403.09413">
+                            <img src="./imgs_talk3d/icons/Paper1.png" height="60px">
+                            <h4><strong>Paper</strong></h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" target="_blank">
+                            <image src="./imgs_talk3d/icons/video.png" height="60px">
+                                <h4><strong>Video<br>(Comming soon)</strong></h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/KU-CVLAB/Talk3D" target="_blank">
+                            <image src="./imgs_talk3d/icons/github.png" height="60px">
+                                <h4><strong>Code</strong></h4>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- <div class="container"> -->
+            <div class="row">
+                <div class="text-center">
+                    <img src="./imgs_talk3d/teaser.png" width="100%">
+                </div>
+                
+                <div style="text-align:justify">
+                    The left (<strong>ER-NeRF</strong>) and the right (<strong>Talk3D</strong>) show the results of the talking head rendered from various camera viewpoints. 
+                    Leveraging 3D generative prior, our <strong>Talk3D</strong> predicts a plausible geometry from a given monocular video dataset.
+                    The figure shows the robustness in generating high-fidelity talking portrait videos even at unseen head poses during training.
+                    <br>
+                    <br>
+
+                </div>
+            </div>
+        <!-- </div> -->
+
+        <div class="row">
+            <div class="text-center col-md-offset-0">
+            <h2>
+                Abstract
+            </h2>
+            </div>
+            <div style="text-align:justify;  margin-left:10%; margin-right:10%">
+                Recent methods for audio-driven talking head synthesis often optimize neural radiance fields (NeRF) on 
+                a monocular talking portrait video, leveraging its capability to render high-fidelity and 3D-consistent 
+                novel-view frames. However, they often struggle to reconstruct complete face geometry due to the absence of 
+                comprehensive 3D information in the monocular videos. In this paper, we introduce a novel audio-driven 
+                talking head synthesis framework, called Talk3D, that can faithfully reconstruct its plausible facial geometries 
+                by effectively adopting the pre-trained 3D-aware generative prior. 
+                Given the personalized 3D generative model, we use our novel audio-guided attention U-Net architecture 
+                that predicts the dynamic face variations in the NeRF space driven by audio. Furthermore, our model is 
+                modulated by various conditioning tokens which effectively disentangle scene variations unrelated to audio 
+                features. Compared to existing methods, our method excels in generating realistic facial geometries even 
+                under extreme head poses. We also conduct extensive experiments showing our approach surpasses state-of-the-art 
+                benchmarks in terms of both quantitative and qualitative evaluations.
+            </div>
+            <br><br>
+
+            <h2>
+                Qualitative Results
+            </h2>
+
+            <h2>
+                <div class="text-center">
+                    <font size="5px">Novel-view Settings</font>
+                </div>
+            </h2>
+            <div class="text-center col-md-offset-0">
+                <video width="360" height="360" controls>
+                    <source src="./video/novelview/novel1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <video width="360" height="360" controls>
+                    <source src="./video/novelview/novel2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            <div>
+
+            <h2>
+                <font size="5px">Cross-driven Settings</font>
+            </h2>
+            <div class="text-center col-md-offset-0">
+                <video width="360" height="360" controls>
+                    <source src="./video/cross/cross1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <video width="360" height="360" controls>
+                    <source src="./video/cross/cross2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <video width="360" height="360" controls>
+                    <source src="./video/cross/cross3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            <div>
+
+            <div class="text-center col-md-offset-0">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="text-center col-md-offset-0">
+
+            </div>
+            <br><br>
+        </div>
+
+            <div class="row">
+                <div class="col-md-offset-0">
+                    <h2>
+                        <div style="text-align: left;">Quantitative Results</div>
+                    </h2>
+
+
+                    <h2>
+                        <font size="5px">Novel-view Settings</font>
+                    </h2>
+                    <div class="text-center">
+                        <img src="./imgs_talk3d/quan/novelview.png" width="80%">
+                    </div>
+                    <br>
+                    <h2>
+                        <font size="5px">Self-driven Settings</font>
+                    </h2>
+                    <div class="text-center">
+                        <img src="./imgs_talk3d/quan/selfdriven.png" width="70%">
+                    </div>
+                    <br>
+                    <h2>
+                        <font size="5px">Cross-driven Settings</font>
+                    </h2>
+                    <div class="text-center">
+                        <img src="./imgs_talk3d/quan/crossdriven.png" width="55%">
+                    </div>
+                    <br>
+                    <h2>
+                        <font size="5px">User Study</font>
+                    </h2>
+                    <div class="text-center">
+                        <img src="./imgs_talk3d/quan/user.png" width="85%">
+                    </div>
+                </div>
+            </div>
+
+        <div class="row">
+            <div style="text-align: left;">
+                <div class="col-md-offset-0">
+                    <h3>
+                        Citation
+                    </h3>
+                    If you find our work useful in your research, please cite our work as: 
+                    <div class="form-group col-md-10">
+                            <!-- <pre>
+    @misc{jung2024relaxing,
+        title={Relaxing Accurate Initialization Constraint for 3D Gaussian Splatting}, 
+        author={Jaewoo Jung and Jisang Han and Honggyu An and Jiwon Kang and Seonghoon Park and Seungryong Kim},
+        year={2024},
+        eprint={2403.09413},
+        archivePrefix={arXiv},
+        primaryClass={cs.CV}
+    }</pre> -->
+                    </div>
+                </div>
+            </div>
+
+                <div class="row">
+                    <div class="col-md-offset-0">
+                        <h3>
+                            <div style="text-align: left;">Acknowledgements</div>
+                        </h3>
+                        <p class="text-justify">
+                            <!-- We would like to thank Lior Yariv and Kai Zhang for helping us evaluate their methods, and Ricardo Martin-Brualla for helpful comments on our text. DV is supported by the National Science Foundation under Cooperative Agreement PHY-2019786 (an NSF AI Institute, <a href="http://iaifi.org">http://iaifi.org</a>) -->
+                            <!-- <br> -->
+                            The website template was borrowed from <a href="http://mgharbi.com/">Michaël Gharbi</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
