@@ -1,5 +1,5 @@
 # Talk3D: High-Fidelity Talking Portrait Synthesis via Personalized 3D Generative Prior
-<a href=""><img src="https://img.shields.io/badge/arXiv-2403.09413-%23B31B1B"></a>
+<a href="https://arxiv.org/abs/2403.20153"><img src="https://img.shields.io/badge/arXiv-2403.20153-%23B31B1B"></a>
 <a href="https://ku-cvlab.github.io/Talk3D/ "><img src="https://img.shields.io/badge/Project%20Page-online-brightgreen"></a>
 <br>
 
@@ -16,7 +16,7 @@ by [Jaehoon Ko](https://github.com/mlnyang), [Kyusun Cho](https://github.com/kyu
 <!-- <br> -->
 We introduce a novel framework (**Talk3D**) for 3D-aware talking head synthesis!
 
-For more information, please check out our [Paper]() and our [Project page](https://ku-cvlab.github.io/Talk3D/).
+For more information, please check out our [Paper](https://arxiv.org/abs/2403.20153) and our [Project page](https://ku-cvlab.github.io/Talk3D/).
 
 ## Installation
 We implemented & tested **Talk3D** with NVIDIA RTX 3090 and A6000 GPU.
@@ -64,5 +64,12 @@ We would like to acknowledge the contributions of [EG3D](https://github.com/NVla
 ## Citation
 If you find our work helpful, please cite our work as:
 ```
-
+@misc{ko2024talk3d,
+      title={Talk3D: High-Fidelity Talking Portrait Synthesis via Personalized 3D Generative Prior}, 
+      author={Jaehoon Ko and Kyusun Cho and Joungbin Lee and Heeji Yoon and Sangmin Lee and Sangjun Ahn and Seungryong Kim},
+      year={2024},
+      eprint={2403.20153},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
 ```
