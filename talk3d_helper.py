@@ -489,7 +489,7 @@ class TrainOptions:
         'hyperparams'
         self.parser.add_argument('--batchsize', default=2, type=int, help='batch size per gpu - To use syncnet loss, you must keep it maximum 5')
         self.parser.add_argument('--vis_opt_process', action='store_true', help='bool: using mlpconditioning')
-        self.parser.add_argument('--max_G_tuning_iter', default=2000, type=int, help='maximum iterations for G_tuning')
+        self.parser.add_argument('--max_G_tuning_iter', default=1000, type=int, help='maximum iterations for G_tuning')
         self.parser.add_argument('--learning_rate', default=0.0005, type=float, help='select training learning rate')
         self.parser.add_argument('--learning_rate_tune', default=0.0002, type=float, help='select training learning rate')
         self.parser.add_argument('--scheduler_step_size', default=2, type=int, help='select training hyperparams - decay in epochs')
@@ -498,7 +498,7 @@ class TrainOptions:
         self.parser.add_argument('--mouth_loss_weight', default=15, type=float, help='select mouth loss weight')
         self.parser.add_argument('--id_loss_weight', default=1, type=float, help='select ID loss weight')
         self.parser.add_argument('--LPIPS_loss_weight', default=1, type=float, help='select LPIPS loss weight')
-        self.parser.add_argument('--tuning_start_iter', default=40000, type=int, help='num of epochs for initializing SR tuning stage')
+        self.parser.add_argument('--tuning_start_iter', default=80000, type=int, help='num of epochs for initializing SR tuning stage')
         self.parser.add_argument('--sync_loss_weight', default=0.01, type=float, help='select syncnet loss weight')
         self.parser.add_argument('--log_psnr', action='store_true', help='bool: logging psnr in tqdm')
         self.parser.add_argument('--num_gpus', default=1, type=float, help='number of GPU')
