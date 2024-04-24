@@ -1,13 +1,13 @@
 To preprocess video dataset, run the bash file below:
 
 ```
-sh do_preprocess.sh {path/to/video.mp4} {videoname} {path/to/save/directory}
+sh do_preprocessing.sh {path/to/video.mp4} {videoname} {path/to/save/directory}
 ```
 
 For instance, you can run like below:
 
 ```
-sh do_preprocess.sh ./videos/May.mp4 May ./data
+sh do_preprocessing.sh ./videos/May.mp4 May ./data
 ```
 
 This preprocessing takes time to find camera params by inversion.
